@@ -71,6 +71,7 @@ Once the application is deployed it will be available on
 The api requests two parameters namely, 'path' and 'depth'
 
 'path' -  The starting directory for the DirectoryTraverser (default '.')
+
 'depth' - he Maximum depth that the DirectoryTraverser object is allowed to traverse within the file path (default 10)
 
 (Windows) To edit these parameters and display the full directory listing along with file attributes, we can use 
@@ -102,4 +103,5 @@ Improve current logging to write to a file (.log) on the local disk
 ### Contact ###
 
 Author: Ignatius de Villiers
+
 Email: iggydv12@gmail.com

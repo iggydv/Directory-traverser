@@ -49,10 +49,33 @@ And continue to push the file to Dockerhub
 
 	mvn dockerfile:push
 	
+To check whether your image was successfully created you can run
+	
+	docker images
+	
+You will see the docker image under repository
+
+	ignatius/gs-spring-boot-docker
+	
 Then Finally to run the freshly minted Docker image with Spring profiles run this command
 
-	docker run -e "SPRING_PROFILES_ACTIVE=dev" -p 8080:8080 -t ingatius/gs-spring-boot-docker
+	docker run -e "SPRING_PROFILES_ACTIVE=dev" -p 8080:8080 -t ignatius/gs-spring-boot-docker
 
+
+### Usage ###
+
+Once the application is deployed it will be available on
+
+	http://localhost:8080/traverse-directory
+
+The api requests two parameters namely, 'path' and 'depth'
+
+'path' -  The starting directory for the DirectoryTraverser (default '.')
+'depth' - he Maximum depth that the DirectoryTraverser object is allowed to traverse within the file path (default 10)
+
+(Windows) To edit these parameters and display the full directory listing along with file attributes, we can use 
+	
+	http://localhost:8080/traverse-directory?path=.&depth=1000000
 
 ### Future Work ###
 
@@ -68,6 +91,15 @@ machines.
 
 More unit tests can be added to ensure that the application does not break when updating and integrating project. Unit test for cross platform functionality should also be added (testing valid paths for any platform)
 
-* Naming Convention and Application Structure
+* Improved Naming Convention and Application Structure
 
 Naming of Directories/classes/methods/variables and project structure should be re-evaluated and reviewed to ensure that proper Java coding standards are used.
+
+* Improved Logging
+
+Improve current logging to write to a file (.log) on the local disk
+
+### Contact ###
+
+Author: Ignatius de Villiers
+Email: iggydv12@gmail.com

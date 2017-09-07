@@ -31,8 +31,8 @@ public class DirectoryTraverserController
     private String output = null;
 
 
-    @RequestMapping("/traverse-directory")
-    public ResponseEntity greeting(@RequestParam(value = "path", defaultValue = ".") String path, @RequestParam(value = "depth", defaultValue = "10") Integer depth ) throws IOException {
+    @RequestMapping("/traverse_directory")
+    public ResponseEntity traverse_directory(@RequestParam(value = "path", defaultValue = ".") String path, @RequestParam(value = "depth", defaultValue = "10") Integer depth ) throws IOException {
 
         logger.info("==== in traverse-directory ====");
         logger.info("Requested path: " + path);
